@@ -1,0 +1,70 @@
+[tool.poetry]
+name = "advent-of-code"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "advent_of_code"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+numpy = "^1.23.5"
+scipy = "^1.9.3"
+matplotlib = "^3.6.2"
+advent-of-code-data = "^1.2.3"
+tqdm = "^4.64.1"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^22.10.0"
+pytest = "^7.2.0"
+isort = "^5.10.1"
+flake8 = "<6"
+flakeheaven = "^3.2.1"
+flake8-black = "^0.3.5"
+flake8-blind-except = "^0.2.1"
+flake8-bugbear = "^22.10.27"
+flake8-builtins = "^2.0.1"
+flake8-comprehensions = "^3.10.1"
+flake8-eradicate = "^1.4.0"
+flake8-expression-complexity = "^0.0.11"
+flake8-isort = "^5.0.3"
+flake8-pytest-style = "^1.6.0"
+flake8-return = "^1.2.0"
+flake8-simplify = "^0.19.3"
+flake8-use-fstring = "^1.4"
+flake8-use-pathlib = "^0.3.0"
+pep8-naming = "^0.13.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.flakeheaven]
+exclude = ["*build/*", "*.eggs*", "*.ipynb", ".git", ".vendor"]
+format = "grouped"
+show_source = true
+max_line_length = 88
+
+
+[tool.flakeheaven.plugins]
+flake8-black = ["+*"]
+flake8-blind-except = ["+*"]
+flake8-bugbear = ["+*", "-B008"]
+flake8-builtins = ["+*"]
+flake8-comprehensions = ["+*"]
+flake8-eradicate = ["+*"]
+flake8-expression-complexity = ["+*"]
+flake8-isort = ["+*"]
+flake8-pytest-style = ["+*", "-PT013"]
+flake8-return = ["+*"]
+flake8-simplify = ["+*"]
+flake8-use-fstring = ["+*"]
+flake8-use-pathlib = ["+*"]
+
+mccabe = ["+*"]
+pep8-naming = ["+*"]
+# E203, W503 -> incompatibility with black
+pycodestyle = ["+*", "-E203", "-W503"]
+pyflakes = ["+*"]
