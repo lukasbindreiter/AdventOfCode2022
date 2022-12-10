@@ -16,6 +16,17 @@ termcolor = "*"
 tzlocal = "*"
 
 [[package]]
+name = "advent-of-code-ocr"
+version = "1.0.0"
+description = "Convert Advent of Code ASCII art"
+category = "main"
+optional = false
+python-versions = "~=3.7"
+
+[package.extras]
+test = ["numpy", "pytest"]
+
+[[package]]
 name = "astor"
 version = "0.8.1"
 description = "Read/rewrite/write Python ASTs"
@@ -829,12 +840,16 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "13865c76ec015b97ed7dfd74dc0bfbc3e5e5aa4ca33080bc81455cca99c1f608"
+content-hash = "86521712985867ed0df650f81505d7bfd3240c1a9d6027d5a5a21c718b843d1d"
 
 [metadata.files]
 advent-of-code-data = [
     {file = "advent-of-code-data-1.2.3.tar.gz", hash = "sha256:b699cad920bb06694e0c255cfafe75883fbe2743670261527603b0b705cbf97f"},
     {file = "advent_of_code_data-1.2.3-py2.py3-none-any.whl", hash = "sha256:0cfbca75f9d2482669840ffc90c94bfc838fa499bcb57cc3491fc2433179c156"},
+]
+advent-of-code-ocr = [
+    {file = "advent-of-code-ocr-1.0.0.tar.gz", hash = "sha256:b2f5593967eca658534cb23044b28a3e623de8a4df4c97e805bd50c5d741cd6c"},
+    {file = "advent_of_code_ocr-1.0.0-py2.py3-none-any.whl", hash = "sha256:690bcdad71e4246264ba1a4678e3666732bf1aa7b1bc285ab6b88bea263d5c40"},
 ]
 astor = [
     {file = "astor-0.8.1-py2.py3-none-any.whl", hash = "sha256:070a54e890cefb5b3739d19f30f5a5ec840ffc9c50ffa7d23cc9fc1a38ebbfc5"},
