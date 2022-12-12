@@ -493,6 +493,21 @@ optional = false
 python-versions = "*"
 
 [[package]]
+name = "networkx"
+version = "2.8.8"
+description = "Python package for creating and manipulating graphs and networks"
+category = "main"
+optional = false
+python-versions = ">=3.8"
+
+[package.extras]
+default = ["matplotlib (>=3.4)", "numpy (>=1.19)", "pandas (>=1.3)", "scipy (>=1.8)"]
+developer = ["mypy (>=0.982)", "pre-commit (>=2.20)"]
+doc = ["nb2plots (>=0.6)", "numpydoc (>=1.5)", "pillow (>=9.2)", "pydata-sphinx-theme (>=0.11)", "sphinx (>=5.2)", "sphinx-gallery (>=0.11)", "texext (>=0.6.6)"]
+extra = ["lxml (>=4.6)", "pydot (>=1.4.2)", "pygraphviz (>=1.9)", "sympy (>=1.10)"]
+test = ["codecov (>=2.1)", "pytest (>=7.2)", "pytest-cov (>=4.0)"]
+
+[[package]]
 name = "numba"
 version = "0.56.4"
 description = "compiling Python code using LLVM"
@@ -848,7 +863,7 @@ socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "fe4ed089940218020f099ece646538fb3bd8cef18bcea7bbd16c388e4e1c483a"
+content-hash = "d8a2b4189420a7d7a52ff1d1e0cace65721133a02c1e64c37392399c74f157f5"
 
 [metadata.files]
 advent-of-code-data = [
@@ -1229,6 +1244,10 @@ mccabe = [
 mypy-extensions = [
     {file = "mypy_extensions-0.4.3-py2.py3-none-any.whl", hash = "sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d"},
     {file = "mypy_extensions-0.4.3.tar.gz", hash = "sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8"},
+]
+networkx = [
+    {file = "networkx-2.8.8-py3-none-any.whl", hash = "sha256:e435dfa75b1d7195c7b8378c3859f0445cd88c6b0375c181ed66823a9ceb7524"},
+    {file = "networkx-2.8.8.tar.gz", hash = "sha256:230d388117af870fce5647a3c52401fcf753e94720e6ea6b4197a5355648885e"},
 ]
 numba = [
     {file = "numba-0.56.4-cp310-cp310-macosx_10_14_x86_64.whl", hash = "sha256:9f62672145f8669ec08762895fe85f4cf0ead08ce3164667f2b94b2f62ab23c3"},
